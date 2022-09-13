@@ -3,6 +3,8 @@ import {
   Avatar,
   Badge,
   InputBase,
+  Menu,
+  MenuItem,
   styled,
   Toolbar,
   Typography,
@@ -10,6 +12,7 @@ import {
 import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
 import MarkAsUnreadRoundedIcon from "@mui/icons-material/MarkAsUnreadRounded";
 import NotificationsActiveRoundedIcon from "@mui/icons-material/NotificationsActiveRounded";
+import { useState } from "react";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -42,6 +45,7 @@ const UserIcon = styled("Box")(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
     <AppBar position="stick">
       <StyledToolbar>
@@ -62,11 +66,12 @@ const Navbar = () => {
             <NotificationsActiveRoundedIcon />
           </Badge>
           <Avatar
+            onClick={(e) => setOpen(true)}
             sx={{ width: 30, height: 30 }}
             src="https://picsum.photos/id/1011/200/300"
           />
         </Icons>
-        <UserIcon>
+        <UserIcon onClick={(e) => setOpen(true)}>
           <Avatar
             sx={{ width: 30, height: 30 }}
             src="https://picsum.photos/id/1011/200/300"
@@ -74,6 +79,24 @@ const Navbar = () => {
           <Typography>Sujan</Typography>
         </UserIcon>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
