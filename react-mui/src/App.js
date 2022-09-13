@@ -1,7 +1,13 @@
+import Feed from "./components/Feed";
+import Rightbar from "./components/Rightbar";
+import Sidebar from "./components/Sidebar";
+
 function App() {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Sidebar />
+      <Feed />
+      <Rightbar />
     </div>
   );
 }
