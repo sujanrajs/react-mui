@@ -30,6 +30,7 @@ const Icons = styled("Box")(({ theme }) => ({
   display: "none",
   gap: "20px",
   alignItems: "center",
+  cursor: "pointer",
   [theme.breakpoints.up("sm")]: {
     display: "flex",
   },
@@ -39,6 +40,7 @@ const UserIcon = styled("Box")(({ theme }) => ({
   display: "flex",
   gap: "10px",
   alignItems: "center",
+  cursor: "pointer",
   [theme.breakpoints.up("sm")]: {
     display: "none",
   },
@@ -47,7 +49,7 @@ const UserIcon = styled("Box")(({ theme }) => ({
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <AppBar position="stick">
+    <AppBar position="sticky">
       <StyledToolbar>
         <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
           SUJAN RAJS
