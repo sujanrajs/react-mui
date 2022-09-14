@@ -18,7 +18,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 const Sidebar = () => {
   return (
     <Box
-      bgcolor="red"
+      //bgcolor="red"
       flex={1}
       padding={2}
       sx={{ display: { xs: "none", sm: "block" } }}

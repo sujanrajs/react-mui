@@ -14,31 +14,41 @@ import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import ShareRoundedIcon from "@mui/icons-material/ShareRounded";
 
 function FeedPost() {
+  const newDate = new Date();
+  const dateNow =
+    newDate.toLocaleString("default", { month: "long" }) +
+    " " +
+    newDate.getDate() +
+    " " +
+    newDate.getFullYear();
+
   return (
     <div>
       {" "}
-      <Card>
+      <Card sx={{ mb: 3 }}>
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-              R
+              S
             </Avatar>
           }
           action={<IconButton aria-label="settings"></IconButton>}
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
+          title="Sujan Raj Shrestha"
+          subheader={dateNow}
         />
         <CardMedia
           component="img"
           height="20%"
-          src="https://picsum.photos/seed/picsum/150/100"
-          alt="Paella dish"
+          src="https://images.unsplash.com/photo-1502657877623-f66bf489d236?auto=format&fit=crop&w=800"
+          alt="scenery"
         />
         <CardContent>
           <Typography variant="body2" color="text.secondary">
-            This impressive paella is a perfect party dish and a fun meal to
-            cook together with your guests. Add 1 cup of frozen peas along with
-            the mussels, if you like.
+            In nature, nothing is perfect and everything is perfect. Trees can
+            be contorted, bent in weird ways, and they're still beautiful. Look
+            deep into nature, and then you will understand everything better.
+            Heaven is under our feet as well as over our heads. We don’t inherit
+            the earth from our ancestors, we borrow it from our children.
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
