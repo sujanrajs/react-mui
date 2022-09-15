@@ -59,7 +59,11 @@ const Navbar = () => {
           sx={{ display: { xs: "block", sm: "none" }, color: "#B32428" }}
         />
         <Search>
-          <InputBase placeholder="search..." />
+          <InputBase
+            placeholder="search..."
+            bgcolor={"background.default"}
+            color={"text.primary"}
+          />
         </Search>
         <Icons>
           <Badge badgeContent={5}>
@@ -97,8 +101,8 @@ const Navbar = () => {
         }}
       >
         <MenuItem>Profile</MenuItem>
-        <MenuItem>My account</MenuItem>
-        <MenuItem>Logout</MenuItem>
+        <MenuItem>Account</MenuItem>
+        <MenuItem>LogOff</MenuItem>
       </Menu>
     </AppBar>
   );

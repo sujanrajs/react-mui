@@ -45,10 +45,14 @@ const Add = () => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box width={400} bgcolor="white" p={3} borderRadius={5}>
-          <Typography variant="h6">
-            Create Post
-          </Typography>
+        <Box
+          width={400}
+          p={3}
+          borderRadius={5}
+          bgcolor={"background.default"}
+          color={"text.primary"}
+        >
+          <Typography variant="h6">Create Post</Typography>
           <TextField
             sx={{ width: "100%" }}
             id="standard-multiline-static"

@@ -15,7 +15,7 @@ import Groups2RoundedIcon from "@mui/icons-material/Groups2Rounded";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
-const Sidebar = () => {
+const Sidebar = ({ mode, setMode }) => {
   return (
     <Box
       //bgcolor="red"
@@ -74,7 +74,9 @@ const Sidebar = () => {
               <ListItemIcon>
                 <DarkModeIcon />
               </ListItemIcon>
-              <Switch />
+              <Switch
+                onChange={(e) => setMode(mode === "light" ? "dark" : "light")}
+              />
             </ListItemButton>
           </ListItem>
         </List>
