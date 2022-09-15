@@ -23,7 +23,7 @@ function FeedPost() {
     newDate.getFullYear();
 
   return (
-    <div>
+    <>
       {" "}
       <Card sx={{ mb: 3 }}>
         <CardHeader
@@ -63,7 +63,7 @@ function FeedPost() {
           </IconButton>
         </CardActions>
       </Card>
-    </div>
+    </>
   );
 }
 
