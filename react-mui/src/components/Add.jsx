@@ -17,9 +17,11 @@ import CameraAltRoundedIcon from "@mui/icons-material/CameraAltRounded";
 import PersonAddAltRoundedIcon from "@mui/icons-material/PersonAddAltRounded";
 
 const StyledModal = styled(Modal)({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  //display: "flex",
+  //alignItems: "center",
+  //justifyContent: "center",
+  position: "absolute",
+  bottom: "0",
 });
 
 const Add = () => {
@@ -70,7 +72,7 @@ const Add = () => {
             fullWidth
             variant="contained"
             aria-label="outlined primary button group"
-            sx={{ marginBottom: "1rem" }}
+            sx={{ marginBottom: "10px" }}
           >
             <Button color="success" sx={{ width: 550 }}>
               Post
