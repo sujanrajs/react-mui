@@ -17,11 +17,12 @@ import CameraAltRoundedIcon from "@mui/icons-material/CameraAltRounded";
 import PersonAddAltRoundedIcon from "@mui/icons-material/PersonAddAltRounded";
 
 const StyledModal = styled(Modal)({
-  //display: "flex",
-  //alignItems: "center",
-  //justifyContent: "center",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   position: "absolute",
   bottom: "0",
+
 });
 
 const Add = () => {
